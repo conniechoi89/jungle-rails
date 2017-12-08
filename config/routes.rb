@@ -18,15 +18,8 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
 
-  # root to:'users#new'
-  # get 'signup', to: 'users#new', as: 'signup'
-  # get 'login', to: 'sessions#new', as: 'login'
-  # get 'logout', to: 'sessions#destroy', as: 'logout'
-  # get '/signup' => 'users#new'
-  # post '/users' => 'users#create'
-
-  resources :users
-  resources :sessions
+  resources :users, only: [:create, :new, :destroy]
+  resource :session, only: [:create, :new, :destroy]
 
 
 # end

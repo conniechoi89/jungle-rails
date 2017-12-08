@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for your order</h1>
+    <p>
+      You have successfully ordered products from Jungle.
+      <tbody>
+      <% @order_total = 0 %>
+      <% @order.line_items.each do |line_item| %>
+      <%= render 'item', line_item: line_item %>
+    <% end %>
+  </tbody>
+  </body>
+</html>

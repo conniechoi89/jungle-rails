@@ -23,8 +23,36 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
-      </div>
-    </div>
+        <h3>Reviews</h3>
+          <% @product.reviews.each do |review| %>
+            <% if review.id %>
+              <div>
+                rating: <%= review.rating %>
+                <%= review.description %>
+                <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% end %>
+          <% end %>
+
+        <h3>New Review</h3>
+        <%= form_for([@product, @review]) do |f| %>
+          <div class="field">
+            <%= f.label :description %><br>
+            <%= f.text_field :description %>
+          </div>
+          <div class="field">
+            <%= f.label :rating %><br>
+            <%= f.select :rating, (1..10) %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+        <%= link_to 'Products', products_path %>
+          </div>
+        </div>
+
 
   </article>
 

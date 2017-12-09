@@ -22,8 +22,10 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshot
-
-
+!["Login page"](https://github.com/conniechoi89/jungle-rails/blob/master/docs/jungle.png?raw=true)
+!["Registration page"](https://github.com/conniechoi89/jungle-rails/blob/master/docs/jungle1.png?raw=true)
+!["Shows 'signed in as user'"](https://github.com/conniechoi89/jungle-rails/blob/master/docs/jungle3.png?raw=true)
+!["Shows ratings and descriptions"](https://github.com/conniechoi89/jungle-rails/blob/master/docs/jungle4.png?raw=true)
 
 
 ## Dependencies
